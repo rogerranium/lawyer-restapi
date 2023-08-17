@@ -4,7 +4,7 @@ import * as userController from '../controller/user.controller';
 export const route = new Hono()
 
 route.post('/',userController.createUser)
-route.get('/', (c) => c.text('get'))
+route.get('/', userController.getUsers)
 
 route.get('/:userId', (c) => c.text('get user id'))
 route.patch('/:userId', (c) => c.text('patch'))

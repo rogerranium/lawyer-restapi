@@ -65,3 +65,14 @@ export const createUser: Handler = async (c) => {
 
     return c.json("", httpStatus.CREATED as StatusCode)
 }
+
+export const getUsers: Handler = async (c) => {
+    const users = await prisma.user.findMany()
+
+
+    if (users.length > 0) {
+        return c.json({users : users}, httpStatus.OK as StatusCode)
+    } else {
+        return c.json({users : "No Content"}, httpStatus.OK as StatusCode)
+    }
+}
