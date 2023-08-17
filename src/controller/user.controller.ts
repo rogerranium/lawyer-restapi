@@ -40,7 +40,7 @@ export const createUser: Handler = async (c) => {
         return c.json({ message: 'User exist with this email !!!!', status: httpStatus[409] }, 409)
     } else {
         try {
-          
+
             const newUser = await prisma.user.create({
                 data: {
                     role: 'User',
@@ -56,7 +56,11 @@ export const createUser: Handler = async (c) => {
             })
 
             if (newUser) {
-                return c.json(newUser, httpStatus.CREATED as StatusCode)
+                const url = "https://lawyer-email.rogerranium.workers.dev/register/" + email + "/" + firstName + " " + lastName
+                const response = await fetch(url)
+                if (response.ok) {
+                    return c.json({ message: "User created successfull !!!", email: "Email sent successfull !!!", user: newUser }, httpStatus.CREATED as StatusCode)
+                }
             }
         } catch (error) {
             return c.json({ message: 'Error created user !!!!', status: httpStatus.INTERNAL_SERVER_ERROR }, httpStatus.INTERNAL_SERVER_ERROR as StatusCode)
