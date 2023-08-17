@@ -6,7 +6,8 @@
   * REST API
   
 # Sources
-
+  * https://github.com/OultimoCoder/cloudflare-planetscale-hono-boilerplate#emails
+  * https://hono.dev/middleware/builtin/timing
   * https://www.prisma.io/docs/guides/deployment/edge/deploy-to-cloudflare-workers
   * https://hono.dev/getting-started/cloudflare-workers
   * https://blog.logrocket.com/build-web-application-hono/
