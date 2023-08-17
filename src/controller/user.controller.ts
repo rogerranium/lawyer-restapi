@@ -40,6 +40,7 @@ export const createUser: Handler = async (c) => {
         return c.json({ message: 'User exist with this email !!!!', status: httpStatus[409] }, 409)
     } else {
         try {
+          
             const newUser = await prisma.user.create({
                 data: {
                     role: 'User',
@@ -71,8 +72,8 @@ export const getUsers: Handler = async (c) => {
 
 
     if (users.length > 0) {
-        return c.json({users : users}, httpStatus.OK as StatusCode)
+        return c.json({ users: users }, httpStatus.OK as StatusCode)
     } else {
-        return c.json({users : "No Content"}, httpStatus.OK as StatusCode)
+        return c.json({ users: "No Content" }, httpStatus.OK as StatusCode)
     }
 }

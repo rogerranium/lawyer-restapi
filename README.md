@@ -6,6 +6,7 @@
   * REST API
   
 # Sources
+  * https://www.youtube.com/watch?v=QgcryQ-9RXM&list=PLpjTM82q4Gu7elD3CNDADmpnNQnCUpEpW&ab_channel=Finsweet
   * https://github.com/OultimoCoder/cloudflare-planetscale-hono-boilerplate#emails
   * https://hono.dev/middleware/builtin/timing
   * https://www.prisma.io/docs/guides/deployment/edge/deploy-to-cloudflare-workers
