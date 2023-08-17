@@ -17,6 +17,7 @@
     "@hono/node-server": "^1.1.1",
     "@prisma/client": "^5.1.1",
     "color-convert": "^2.0.1",
-    "hono": "^3.4.3"
+    "hono": "^3.4.3",
+    "http-status": "^1.6.2"
   }
 }
